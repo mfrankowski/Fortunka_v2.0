@@ -4,28 +4,10 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
-
-<% title "All fortunes" %>
-
-<% @fortunes.each do |fortune| %>
-<article class="index">
-  <div class="attribute">
-    <span class="name">Author</span>
-    <span class="value"><%= fortune.author %></span>
-  </div>
-
-
-    <div class="attribute">
-    <span class="name">Body</span>
-    <span class="value"><%= fortune.body %></span>
-  </div>
-    <div class="links">
-    <%= link_to 'Show', fortune %> |
-    <%= link_to 'Edit', edit_fortune_path(fortune) %> |
-    <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete %>
-  </div>
-</article>
-<% end %>
+<br/>
+<div id="fortunes">
+  <%= render :partial => 'fortune', :collection => @fortunes %>
+</div>
 
 <div class="link">
   <%= link_to 'New Fortune', new_fortune_path %>

@@ -3,8 +3,12 @@
 
 en:
   hello: "Hello world"
-
-en:
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Change %{model}"
+    data:
+      sure: "What are you going to do! Are you sure?"
   views:
     pagination:
       previous: "&#x21d0; Previous"
