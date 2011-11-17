@@ -1,11 +1,14 @@
 <% title "All fortunes" %>
 
+
 <% @fortunes.each do |fortune| %>
 <article class="index">
   <div class="attribute">
     <span class="name">Source</span>
     <span class="value"><%= fortune.source %></span>
   </div>
+
+
     <div class="attribute">
     <span class="name">Body</span>
     <span class="value"><%= fortune.body %></span>
