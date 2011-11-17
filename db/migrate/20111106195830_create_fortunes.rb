@@ -1,7 +1,7 @@
 class CreateFortunes < ActiveRecord::Migration
   def change
     create_table :fortunes do |t|
-      t.string :source
+      t.string :author
       t.text :body
 
       t.timestamps

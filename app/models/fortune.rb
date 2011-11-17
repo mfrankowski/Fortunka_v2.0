@@ -1,12 +1,15 @@
 class Fortune < ActiveRecord::Base
 
-def self.search(search)
+  validates :body, :presence => true
+  validates_length_of :body, :in => 2..255
+  validates_uniqueness_of :body, :case_sensitive => false
+
+  def self.search(search)
   if search
-    where('quotation LIKE ?', "%#{search}%")
+    where('body LIKE ?', "%#{search}%")
   else
     scoped
   end
 end
 
 end
-

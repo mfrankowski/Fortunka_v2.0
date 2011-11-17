@@ -2,7 +2,7 @@ class FortunesController < ApplicationController
   # GET /fortunes
   # GET /fortunes.xml
   def index
-    @fortunes = Fortune.search(params[:search]).order(:source).page(params[:page]).per(2)
+    @fortunes = Fortune.search(params[:search]).order(:author).page(params[:page]).per(2)
     respond_with(@fortunes)
   end
 

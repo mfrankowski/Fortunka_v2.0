@@ -1,11 +1,17 @@
-<% title "All fortunes" %>
+<%= form_tag fortunes_path, :method => :get, :id => "fortunes_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
+<% title "All fortunes" %>
 
 <% @fortunes.each do |fortune| %>
 <article class="index">
   <div class="attribute">
-    <span class="name">Source</span>
-    <span class="value"><%= fortune.source %></span>
+    <span class="name">Author</span>
+    <span class="value"><%= fortune.author %></span>
   </div>
 
 

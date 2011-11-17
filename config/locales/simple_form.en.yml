@@ -23,13 +23,13 @@ en:
     #   password: 'No special characters, please.'
     labels:
       fortune:
-        source: 'source'
+        author: 'author'
         body: 'said'
     hints:
       fortune:
-        source: '(optional)'
+        author: '(optional)'
         body: '(maximum 128 characters)'
     placeholders:
       fortune:
-        source: 'source or blank'
+        author: 'author or blank'
         body: 'no special chars, please'
