@@ -1,4 +1,6 @@
 Fortunki::Application.routes.draw do
+  resources :comments
+
   resources :fortunes
 
 	root :to => "fortunes#index"

@@ -9,6 +9,12 @@
     <span class="name">Body</span>
     <span class="value"><%= @fortune.body %></span>
   </div>
+
+<% if @fortune.comments.any? %>
+  <h2>Comments</h2>
+  <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
+<% end %>
+
   <div class="link">
     <%= link_to 'Edit', edit_fortune_path(@fortune) %> |
     <%= link_to 'Back', fortunes_path %>

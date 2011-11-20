@@ -12,6 +12,12 @@ body {
   font-size: 18px;
   line-height: 1.5;
 }
+
+search {
+  padding-top: 90px;
+  float: right;
+}
+
 // width 600px approx. 60 characters per line
 div[role="main"] {
   width: 600px;
@@ -21,9 +27,10 @@ div[role="main"] {
 }
 header {
   width: 600px;
+  height: 133px;
   margin: 0 auto;
   padding: 18px;
-  background-color: darken($html-background-color, 32%);
+  background: url(img/fortunka_02.png) repeat-x;
   color: #FFF;
   h1 {
     font-size: 140%;

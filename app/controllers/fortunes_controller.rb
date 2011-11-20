@@ -1,4 +1,6 @@
 class FortunesController < ApplicationController
+	respond_to :html, :atom, :js
+
   # GET /fortunes
   # GET /fortunes.xml
   def index
@@ -10,6 +12,7 @@ class FortunesController < ApplicationController
   # GET /fortunes/1.xml
   def show
     @fortune = Fortune.find(params[:id])
+    @comment = Comment.new   
     respond_with(@fortune)
   end
 
