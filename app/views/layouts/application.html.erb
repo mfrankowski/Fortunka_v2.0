@@ -41,6 +41,16 @@
     <%= submit_tag "Search", :name => nil %>
 	</search>
   </header>
+
+<div role="main">
+<% if current_user %>
+  Welcome <%= current_user.name %>!
+  <%= link_to "Sign Out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+<% end %>
+</div>
+
   <div role="main">
     <%= content_tag :h1, yield(:title) if show_title? %>
     <%= yield %>
