@@ -37,8 +37,10 @@
   <header>
 	<search>
      <!--<%= content_tag :h1, "fortunka" %>-->
+<%= form_tag fortunes_path, :method => :get, :id => "fortunes_search" do %>
    <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
+<% end %>
 	</search>
   </header>
 
