@@ -1,7 +1,8 @@
 Fortunki::Application.routes.draw do
+resources :fortunes do
   resources :comments
-
-  resources :fortunes
+  
+end
 
 match "/auth/:provider/callback" => "sessions#create"
 match "/signout" => "sessions#destroy", :as => :signout

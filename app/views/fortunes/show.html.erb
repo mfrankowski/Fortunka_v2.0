@@ -15,6 +15,9 @@
   <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
 <% end %>
 
+<h2>New Comment</h2>
+<%= render :partial => 'comments/form' %>
+
   <div class="link">
     <%= link_to 'Edit', edit_fortune_path(@fortune) %> |
     <%= link_to 'Back', fortunes_path %>
